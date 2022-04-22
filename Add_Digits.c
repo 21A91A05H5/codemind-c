@@ -1,8 +1,7 @@
 #include<stdio.h> 
 int main() 
 { 
-    int num; 
-    int dig,sum; 
+    int dig,sum,num;
     scanf("%d",&num); 
     do 
     { 
@@ -14,8 +13,8 @@ int main()
             num/=10; 
         } 
         num=sum; 
-    }while(num/10!=0);  
-            printf("%d",sum); 
+    }while(num/10!=0); 
+    printf("%d",sum); 
 
     return 0; 
 }
