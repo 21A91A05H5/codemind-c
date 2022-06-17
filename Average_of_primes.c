@@ -1,36 +1,32 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-	int n,arr[100],i,c=0,j,d=0;
-	float avg,sum=0;
-	scanf("%d",&n);
-	for(i=0;i<=n;i++)
-	{
-		scanf("%d",&arr[i]);
-	}
-	    
-		for(i=0;i<=n;i++)
-	{
-	    c=0;
-	    for(j=1;j<=arr[i];j++)
-	    {
-    	    if(arr[i]%j==0)
-    	    {
-    	       
-    	       c++;
-    	    }
-	    }
-	    if(c==2)
-	    {
-	        sum=sum+arr[i];
-	    }
-	    if(c==2)
-	    {
-	        d++;
-	    }
-	}
-	 avg=sum/d;
-	printf("%.2f",avg);
-	
+    int i,n,arr[100],j,c=0,d=0,sum=0;
+    float avg;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    { 
+        c=0;
+        if(arr[i]==1)
+            continue;
+        for(j=2;j<arr[i];j++)
+        {
+            if(arr[i]%j==0)
+            {
+                c++;
+            }
+        }
+        if(c==0)
+        {
+            d++;
+            sum=sum+arr[i];
+            avg=(float)sum/d;
+        }
+            
+        }
+        printf("%.2f",avg);
 }
